@@ -26,39 +26,13 @@ def render_creators():
 
     with col1:
         st.subheader('Riyad Mazari')
-        st.image('imgs/rayane.jpg')
+        st.image('imgs/riyad.jpeg')
     with col2:
         st.subheader('Marouane Mrabtei')
-        st.image('imgs/tamar.jpg')
+        st.image('imgs/marouane.jpeg')
     with col3:
         st.subheader('Louis Golding')
-        st.image('imgs/diego.jpg')
+        st.image('imgs/louis.jpeg')
     with col4:
-        st.subheader('Yahya Laraqui')
-        st.image('imgs/yahya.jpg')
-
-    reveal = st.button('Reveal')
-
-    if reveal:
-        st.markdown(""" 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
-    <style>
-            h1{font-display: aligncenter;
-                font-family: 'Allerta Stencil';
-                color: white;}
-    </style>
-    <h1><center>Website QR Code</center></h1>
-    </head>
-    </html>
-    """, unsafe_allow_html=True)
-        st.balloons()
-        col1, col2, col3 = st.columns([1,2,1])
-
-        col2.image('imgs/qr-code.png')
+        st.subheader('Adnan Bhanji')
+        st.image('imgs/adnan.jpeg')

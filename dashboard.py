@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from utils import load_dataset2
+from utils import load_dataset
 
 
 def render_dashboard():
@@ -25,7 +25,7 @@ def render_dashboard():
     """, unsafe_allow_html=True)
 
     with st.spinner('''Warming up the dashboard's data...'''):
-        df = load_dataset2()
+        df = load_dataset()
         df = df.drop(columns='Unnamed: 0')
 
     custom, predefined = st.tabs(["Make your own", "Predefined"])
@@ -150,9 +150,9 @@ def render_dashboard():
             st.markdown('# $70.000')
 
         with kpi2:
-            st.markdown('#### Fuel Saved')
+            st.markdown('#### Product Saved')
             st.markdown('# 85 Tons')
 
         with kpi3:
             st.markdown('#### CO2 Reduction')
-            st.markdown('# 307 Tons')      
+            st.markdown('# 307 Tons')

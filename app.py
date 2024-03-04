@@ -1,24 +1,20 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 from forecast import render_forecast
-from dashboard import render_dashboard
-from creators import render_creators
+from dashboard import render_dashboard  # Uncomment and implement if you have this module
+from creators import render_creators  # Uncomment and implement if you have this module
 
-st.set_page_config(page_title=None, page_icon=None, layout="wide")
+def main():
+    st.set_page_config(page_title="Ryanair Datathon", layout="wide")
 
-selected = option_menu(
-    menu_title= None,
-    options= ['Forecast', 'Dashboard', 'Creators'],
-    icons=['graph-up', 'clipboard-data'],
-    menu_icon= "cast",
-    default_index= 0,
-    orientation='horizontal',)
+    menu_options = ["Forecast", "Dashboard", "Creators"]
+    choice = st.sidebar.selectbox("Menu", menu_options)
 
-if selected == 'Forecast':
-    st.write('')
-    render_forecast()
-elif selected == 'Dashboard':
-    render_dashboard()
+    if choice == "Forecast":
+        render_forecast()
+    elif choice == "Dashboard":
+        render_dashboard()  # Implement this function in a separate file
+    elif choice == "Creators":
+        render_creators()  # Implement this function in a separate file
 
-elif selected == 'Creators':
-    render_creators()
+if __name__ == "__main__":
+    main()
